@@ -2,7 +2,7 @@
 
 What we need for signing a Pdf with Timestamp?
 - pfx (PKCS12) file
-- an exist Pdf file with random data (You can write a string inside the file)
+- an exist Pdf file with random data (You can write a string inside the file) -- sha256.pdf
 
 <br>
 
