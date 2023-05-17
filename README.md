@@ -59,3 +59,11 @@ settings.SetTsaClient("http://timestamp.identrust.com/", "", "");
 
 ![Ekran görüntüsü 2023-05-17 162726](https://github.com/githuseyingur/PAdES_pdf_LTVsigner_with_timestamp/assets/120099096/d824b323-d3ca-418f-bf85-e74100282e8c)
 
+if you add this lines : 
+```cs
+ appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
+```
+*this will be the output : *
+![image](https://github.com/githuseyingur/PAdES_pdf_LTVsigner_with_timestamp/assets/120099096/110b4c07-d9d4-436f-ba83-735b7b6ffde9)
+
+
