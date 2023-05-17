@@ -1,15 +1,15 @@
 # PAdES LTV Pdf Signer with Timestamp
 
 What we need for signing a Pdf with Timestamp : 
-- pfx (PKCS12) file, 
+- pfx (PKCS12) file
 - an exist Pdf file with random data (You can write a string inside the file)
 
 <br>
 
 ## Generating a pfx(PKCS12) FILE for Testing
-
+<br>
 *Open Command Line(CMD) and apply following lines:*
-
+<br>
 #### Generate an RSA private key:
 
 ```ruby
