@@ -1,6 +1,6 @@
 # PAdES LTV Pdf Signer with Timestamp
 
-What we need for signing a Pdf with Timestamp : 
+What we need for signing a Pdf with Timestamp?
 - pfx (PKCS12) file
 - an exist Pdf file with random data (You can write a string inside the file)
 
