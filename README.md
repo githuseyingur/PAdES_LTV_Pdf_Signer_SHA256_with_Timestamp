@@ -42,7 +42,7 @@ C:\Openssl\bin\openssl.exe x509 -req -days 3650 -in my_request.csr -signkey my_k
 C:\Openssl\bin\openssl.exe pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -export -in my_cert.crt -inkey my_key.key -out my_pkcs12.pfx -name "my-name"
 ```
 
-## CERTIFICATE CREATED - NEXT STEP -->
+## AFTER CERTIFICATE CREATED -->
 *Change Files Directories In Program.cs*
 ```cs
 const string originalPdfPath = @"C:\padestest\sha256.pdf";  // unsigned pdf file path (an existing pdf file)
