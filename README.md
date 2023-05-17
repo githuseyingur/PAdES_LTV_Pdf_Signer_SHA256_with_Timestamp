@@ -43,10 +43,10 @@ C:\Openssl\bin\openssl.exe pkcs12 -keypbe PBE-SHA1-3DES -certpbe PBE-SHA1-3DES -
 ```
 
 ## CERTIFICATE CREATED - NEXT STEP -->
-*In Program.cs;*
+*Change Files Directories In Program.cs*
 ```cs
 const string originalPdfPath = @"C:\padestest\sha256.pdf";  // unsigned pdf file path (an existing pdf file)
-            const string finalPdfPath = @"C:\padestest\signed.pdf";  // output signed pdf file path
+const string finalPdfPath = @"C:\padestest\signed.pdf";  // output signed pdf file path
 ```
 
 
