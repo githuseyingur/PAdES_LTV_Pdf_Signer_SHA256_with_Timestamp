@@ -11,6 +11,8 @@ What we need for signing a Pdf with Timestamp :
 
 *Open Command Line(CMD) and apply following lines:*
 
+*Go OpenSSL Directory with cd Command :*
+
 
 #### Generate an RSA private key:
 
