@@ -8,7 +8,7 @@ What we need for signing a Pdf with Timestamp :
 
 ## Generating a pfx(PKCS12) FILE for Testing
 
-<span style="color:blue">some *blue* text</span>.
+*Open Command Line(CMD) and apply following lines:*
 
 #### Generate an RSA private key:
 
