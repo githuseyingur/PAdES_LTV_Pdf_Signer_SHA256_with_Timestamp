@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAdES_LTVSigner", "PAdES_LTVSigner\PAdES_LTVSigner.csproj", "{5B9FCA24-5AFD-4BAA-9203-4396179038BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PAdES_LTVTest", "PAdES_LTVTest\PAdES_LTVTest.csproj", "{E088482C-6722-41FC-B51A-677F6609B3AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B9FCA24-5AFD-4BAA-9203-4396179038BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B9FCA24-5AFD-4BAA-9203-4396179038BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B9FCA24-5AFD-4BAA-9203-4396179038BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B9FCA24-5AFD-4BAA-9203-4396179038BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E088482C-6722-41FC-B51A-677F6609B3AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E088482C-6722-41FC-B51A-677F6609B3AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E088482C-6722-41FC-B51A-677F6609B3AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E088482C-6722-41FC-B51A-677F6609B3AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
