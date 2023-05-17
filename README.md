@@ -17,7 +17,7 @@ What we need for signing a Pdf with Timestamp :
 #### Generate an RSA private key:
 
 ```ruby
-C:\Openssl\bin\openssl.exe genrsa -out my_key.key 2048.
+C:\Openssl\bin\openssl.exe genrsa -out my_key.key 2048
 ```
 
 #### Generate a Certificate Signing Request:
