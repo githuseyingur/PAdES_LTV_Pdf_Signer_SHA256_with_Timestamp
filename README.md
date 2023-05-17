@@ -13,7 +13,7 @@ What we need for signing a Pdf with Timestamp :
 
 *Go OpenSSL Directory with 'cd' Command :*
 
-```ruby
+```console
 cd C:\Openssl\bin
 ```
 
