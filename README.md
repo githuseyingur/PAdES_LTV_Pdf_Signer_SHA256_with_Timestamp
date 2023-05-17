@@ -20,13 +20,13 @@ cd C:\Openssl\bin
 
 #### Generate an RSA private key:
 
-```console
+```shell script
 C:\Openssl\bin\openssl.exe genrsa -out my_key.key 2048
 ```
 
 #### Generate a Certificate Signing Request:
 
-```console
+```bash
 C:\Openssl\bin\openssl.exe req -new -key my_key.key -out my_request.csr
 ```
 
