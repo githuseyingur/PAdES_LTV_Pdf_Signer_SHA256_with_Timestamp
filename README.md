@@ -8,6 +8,8 @@ What we need for signing a Pdf with Timestamp :
 
 ### Generating a pfx(PKCS12) FILE for Testing
 
+<ins>open command line(CMD) as Administrator and follow below steps :</ins>
+
 ##### Generate an RSA private key:
 ```ruby
 C:\Openssl\bin\openssl.exe genrsa -out my_key.key 2048.
