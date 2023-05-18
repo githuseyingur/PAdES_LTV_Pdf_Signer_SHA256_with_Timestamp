@@ -61,7 +61,7 @@ settings.SetTsaClient("http://timestamp.identrust.com/", "", "");
 
 ![Ekran görüntüsü 2023-05-17 162726](https://github.com/githuseyingur/PAdES_pdf_LTV_signer_SHA256_with_ts/assets/120099096/adab001f-4e15-4b44-a232-7715b3dd1dcf)
 
-Add this lines if you want see the signature on your pdf file: 
+Add this line if you want see the signature in your pdf file: 
 ```cs
  appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
 ```
