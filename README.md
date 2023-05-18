@@ -56,17 +56,17 @@ settings.SetTsaClient("http://timestamp.identrust.com/", "", "");
 
 ### RUN - FINISH
 #### OUTPUT :
-![image](https://github.com/githuseyingur/PAdES_pdf_LTVsigner_with_timestamp/assets/120099096/902a0bfb-9a89-44c0-bd59-53cd4460cadf)
 
-![Ekran görüntüsü 2023-05-17 162726](https://github.com/githuseyingur/PAdES_pdf_LTVsigner_with_timestamp/assets/120099096/d824b323-d3ca-418f-bf85-e74100282e8c)
+![Ekran görüntüsü 2023-05-17 162332](https://github.com/githuseyingur/PAdES_pdf_LTV_signer_SHA256_with_ts/assets/120099096/a7e3eda9-f624-41b6-b5b0-c666b05406d4)
 
-if you add this lines : 
+![Ekran görüntüsü 2023-05-17 162726](https://github.com/githuseyingur/PAdES_pdf_LTV_signer_SHA256_with_ts/assets/120099096/adab001f-4e15-4b44-a232-7715b3dd1dcf)
+
+if you add this lines if you want see the signature on your pdf file: 
 ```cs
  appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
 ```
 *this will be the output : *
 
-
-![image](https://github.com/githuseyingur/PAdES_pdf_LTVsigner_with_timestamp/assets/120099096/110b4c07-d9d4-436f-ba83-735b7b6ffde9)
+![sign](https://github.com/githuseyingur/PAdES_pdf_LTV_signer_SHA256_with_ts/assets/120099096/584ce07d-edef-4be6-8d37-d2862c4c546d)
 
 
