@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using Org.BouncyCastle.Pkcs;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using iTextSharp.text.pdf;
 using iTextSharp.text.pdf.security;
-using Org.BouncyCastle.X509;
-using System.Security.Cryptography;
-using System.Text;
-using Org.BouncyCastle.Asn1.Pkcs;
+using iTextSharp.text;
+using Org.BouncyCastle.Pkcs;
 
 namespace PAdES_LTVSigner
 {
@@ -25,16 +22,33 @@ namespace PAdES_LTVSigner
         /// <param name="signatureSettings"></param>
         public static void Sign(string inputPath, string outputPath, X509Certificate2 cert, ICollection<X509Certificate2> caCerts, SignatureSettings signatureSettings)
         {
+            
             var cp = new Org.BouncyCastle.X509.X509CertificateParser();
             var chain = new List<Org.BouncyCastle.X509.X509Certificate> { cp.ReadCertificate(cert.RawData)};
             chain.AddRange(caCerts.Select(caCert => cp.ReadCertificate(caCert.RawData)));
 
-            IExternalSignature pk = new X509Certificate2Signature(cert, DigestAlgorithms.SHA1);
+            FileStream privateKeyStream = new FileStream("C:\\padesPdf\\my_pkcs12.pfx", System.IO.FileMode.Open);
+            Pkcs12Store pk12 = new Pkcs12Store(privateKeyStream, "942712".ToCharArray());
+            privateKeyStream.Dispose();
 
+            string alias = null;
+            foreach (string tAlias in pk12.Aliases)
+            {
+                if (pk12.IsKeyEntry(tAlias))
+                {
+                    alias = tAlias;
+                    break;
+                }
+            }
+            var pkc = pk12.GetKey(alias).Key;
+
+            IExternalSignature pks = new PrivateKeySignature(pkc, "SHA-256"); 
+          // IExternalSignature pk = new X509Certificate2Signature(cert, DigestAlgorithms.SHA256); 
+            
             IList<ICrlClient> crlList = new List<ICrlClient>();
             crlList.Add(new CrlClientOnline());
 
-            var signed = SignDocument(inputPath, chain, pk, CryptoStandard.CMS, signatureSettings.Reason,
+            var signed = SignDocument(inputPath, chain, pks, CryptoStandard.CMS, signatureSettings.Reason,
                      signatureSettings.Location, crlList, null,  signatureSettings.TsaClient, 0);
 
             File.WriteAllBytes(outputPath, signed);
@@ -81,7 +95,7 @@ namespace PAdES_LTVSigner
                     PdfSignatureAppearance appearance = stamper.SignatureAppearance;
                     appearance.Reason = reason;
                     appearance.Location = location;
-                    //appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
+                    appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig"); // CLOSE
 
                     // Creating the signature
                     MakeSignature.SignDetached(

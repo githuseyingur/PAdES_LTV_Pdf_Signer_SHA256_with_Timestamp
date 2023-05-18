@@ -16,7 +16,7 @@ namespace PAdES_LTVTest
             ICollection<X509Certificate2> caCertificates = new List<X509Certificate2>();
             PAdES_LTVSigner.CertificateHelper.GetCaCertificates(certificate, ref caCertificates);
 
-            var settings = new PAdES_LTVSigner.SignatureSettings { Location = "Turkey", Reason = "TestPAdESLTV"};
+            var settings = new PAdES_LTVSigner.SignatureSettings { Location = "Turkey", Reason = "yok"};
             settings.SetTsaClient("http://timestamp.identrust.com/", "", "");
 
             PAdES_LTVSigner.Signer.Sign(
@@ -28,7 +28,6 @@ namespace PAdES_LTVTest
                 );
 
             Console.WriteLine("Document signed: " + finalPdfPath);
-
             Console.ReadLine();
         }
     }
