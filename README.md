@@ -11,7 +11,7 @@ What we need for signing a Pdf with Timestamp?
 
 ### *Open Command Line(CMD) and apply following lines:*
 
-*Install OpenSSL --> [Download OpenSSL](https://link-url-here.org](https://slproweb.com/products/Win32OpenSSL.html)*
+*Install OpenSSL --> [Download OpenSSL](https://slproweb.com/products/Win32OpenSSL.html)*
 
 *Go OpenSSL Directory with 'cd' Command :*
 
