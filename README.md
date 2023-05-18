@@ -1,4 +1,4 @@
-# PAdES LTV Pdf Signer with Timestamp
+# PAdES LTV Pdf Signer with Timestamp & SHA-256
 
 What we need for signing a Pdf with Timestamp?
 - pfx (PKCS12) file
