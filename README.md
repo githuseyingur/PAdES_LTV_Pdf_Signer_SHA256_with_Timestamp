@@ -65,7 +65,7 @@ if you add this lines if you want see the signature on your pdf file:
 ```cs
  appearance.SetVisibleSignature(new Rectangle(36, 748, 144, 780), 1, "sig");
 ```
-*this will be the output : *
+*this will be the output :*
 
 ![sign](https://github.com/githuseyingur/PAdES_pdf_LTV_signer_SHA256_with_ts/assets/120099096/584ce07d-edef-4be6-8d37-d2862c4c546d)
 
